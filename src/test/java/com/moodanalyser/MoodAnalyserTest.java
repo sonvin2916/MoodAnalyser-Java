@@ -3,7 +3,8 @@ package com.moodanalyser;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class MoodAnalyserTest {
+public class MoodAnalyserTest
+{
     @Test
     public void givenMessage_WhenSad_ShouldReturnSad()
     {
@@ -11,7 +12,6 @@ public class MoodAnalyserTest {
         String mood = moodAnalyser.analyseMood("I am in Sad Mood");
         Assert.assertEquals("SAD",mood);
     }
-
 
 }
 
