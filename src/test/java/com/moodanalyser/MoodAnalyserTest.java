@@ -21,6 +21,7 @@ public class MoodAnalyserTest {
         String mood = moodAnalyser.analyseMood();
         Assert.assertEquals("HAPPY",mood);
 
+<<<<<<< HEAD
     }
     @Test
     public void givenAnalyseMood_WhenNull_ShouldThrowException() {
@@ -33,7 +34,36 @@ public class MoodAnalyserTest {
         } catch (MoodAnalysisException e) {
 
             Assert.assertEquals("Please enter a proper message",e.getMessage());
-        }
-
+=======
     }
+    @Test
+    public void givenAnalyseMood_WhenNull_ShouldThrowException() {
+        MoodAnalyser moodAnalyser = new MoodAnalyser(null);
+        try
+        {
+            moodAnalyser.analyseMood();
+        }
+        catch (MoodAnalysisException e)
+        {
+            Assert.assertEquals(MoodAnalysisException.ExceptionType.ENTERED_NULL,e.getType());
+        }
+    }
+    @Test
+    public void givenAnalyseMood_WhenEpty_ShouldThrowException() {
+        MoodAnalyser moodAnalyser = new MoodAnalyser("");
+        try
+        {
+            moodAnalyser.analyseMood();
+        }
+        catch (MoodAnalysisException e)
+        {
+            Assert.assertEquals(MoodAnalysisException.ExceptionType.ENTERED_EMPTY,e.getType());
+>>>>>>> UC3-throwCustomException
+        }
+    }
+<<<<<<< HEAD
 }
+=======
+
+}
+>>>>>>> UC3-throwCustomException
